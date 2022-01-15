@@ -1,0 +1,50 @@
+{
+  "private": true,
+  "name": "dynapic",
+  "version": "0.0.1",
+  "scripts": {
+    "prepare": "husky install && remix setup node",
+    "dev": "remix dev",
+    "upgrade-deps": "npm-upgrade",
+    "build": "remix build",
+    "lint:prettier": "prettier --ignore-path .gitignore --check .",
+    "lint:eslint": "eslint --ignore-path .gitignore .",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "test": "echo No test script",
+    "pre-commit": "pretty-quick --staged --ignore-path=.eslintignore && lint-staged",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@mantine/core": "3.6.0",
+    "@mantine/hooks": "3.6.0",
+    "@mantine/ssr": "3.6.0",
+    "@radix-ui/react-icons": "1.0.3",
+    "@remix-run/react": "1.1.1",
+    "@remix-run/serve": "1.1.1",
+    "framer-motion": "5.6.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "remix": "1.1.1"
+  },
+  "devDependencies": {
+    "@elkevinwolf/eslint-config-react": "1.0.0",
+    "@elkevinwolf/prettier-config": "1.0.0",
+    "@remix-run/dev": "1.1.1",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "eslint": "7.32.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.7",
+    "npm-upgrade": "3.0.0",
+    "prettier": "2.5.1",
+    "pretty-quick": "3.1.3",
+    "typescript": "4.5.4"
+  },
+  "prettier": "@elkevinwolf/prettier-config",
+  "eslintConfig": {
+    "extends": "@elkevinwolf/react"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --fix"
+  }
+}
