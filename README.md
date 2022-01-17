@@ -18,8 +18,10 @@
 
 ### Supporting Technologies
 
+- [Metronome](https://metronome.sh/): Analytics for Remix projects
 - [Mantine](https://mantine.dev): Component library for React
 - [Framer Motion](https://www.framer.com/motion/): Animation library for React
+- [Radix Icons](https://icons.modulz.app/): Crisp set of 15x15 icons designed by the [Modulz](https://modulz.app) team.
 
 ## Development Guidelines
 

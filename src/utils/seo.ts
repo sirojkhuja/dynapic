@@ -1,5 +1,7 @@
 import type { HtmlMetaDescriptor } from "remix"
 
+export const buildPageTitle = (title?: string) => [title, "Dynapic"].filter(Boolean).join(" - ")
+
 export const buildPageMeta = ({
   url,
   title,
@@ -7,7 +9,7 @@ export const buildPageMeta = ({
   image,
   ...other
 }: HtmlMetaDescriptor = {}): HtmlMetaDescriptor => {
-  title = [title, "Dynapic"].filter(Boolean).join(" - ")
+  title = title && buildPageTitle(title as string)
 
   return {
     ...(title ? { title } : {}),

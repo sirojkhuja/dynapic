@@ -1,5 +1,5 @@
 {
-  "name": "DynaPic",
+  "name": "Dynapic",
   "dockerComposeFile": "docker-compose.yml",
   "service": "workspace",
   "workspaceFolder": "/srv/workspace",
